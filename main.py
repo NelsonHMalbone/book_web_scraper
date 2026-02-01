@@ -6,4 +6,4 @@ request = requests.get('https://books.toscrape.com/catalogue/category/books_1/in
 
 # getting content from request
 content = request.content
-# print(content) # testing to get content
+#print(content) # testing to get content
