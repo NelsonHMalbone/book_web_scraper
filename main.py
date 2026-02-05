@@ -1,3 +1,4 @@
+import bs4
 import requests
 from bs4 import BeautifulSoup
 
@@ -9,3 +10,6 @@ request = requests.get(url) # website request
 # getting content from request
 content = request.text # gets raw html
 #print(content) # testing to get content
+
+noStarchSoup = bs4.BeautifulSoup(content, 'html.parser')
+print(noStarchSoup)
