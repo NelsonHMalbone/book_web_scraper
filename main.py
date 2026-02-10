@@ -9,3 +9,7 @@ request = requests.get(url) # website request
 # getting content from request
 content_soup = BeautifulSoup(request.text, 'html.parser')
 print(content_soup)
+
+for titles in content_soup.find_all('a'):
+    gather_titles = titles.get('title')
+    print(gather_titles)
