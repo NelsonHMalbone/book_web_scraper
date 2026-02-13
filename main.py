@@ -20,3 +20,9 @@ for titles in content_soup.find_all('a'):
 
 # price
 #availability
+
+# completion
+print("Scraping Complete")
+
+# total books found
+print(f"Total books Found: ")
