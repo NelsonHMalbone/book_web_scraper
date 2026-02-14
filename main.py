@@ -8,16 +8,17 @@ request = requests.get(url) # website request
 
 # getting content from request
 content_soup = BeautifulSoup(request.text, 'html.parser')
-print(content_soup)
+
+# making html look cleaner
+pretty_content_soup = content_soup.prettify()
+
+
+print(pretty_content_soup)
 print("Book Price Scraper")
 print("==================\n")
 print("Scraping Book Information\n")
 
 # title
-for titles in content_soup.find_all('a'):
-    gather_titles = titles.get('title')
-    print(gather_titles)
-
 # price
 #availability
 
