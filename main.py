@@ -1,3 +1,5 @@
+from itertools import count
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -14,9 +16,12 @@ print("==================\n")
 print("Scraping Book Information\n")
 
 # title
+
 for titles in content_soup.find_all('a'):
     gather_titles = titles.get('title')
-    print(gather_titles)
+    if gather_titles:
+        print(gather_titles)
+
 
 # price
 #availability
